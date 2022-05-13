@@ -1,0 +1,142 @@
+{
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.vscode-pylance"
+  },
+  "editor.fontFamily": "Operator Mono, JetBrains Mono, CaskaydiaCove NF",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": 300,
+  "editor.fontSize": 15,
+  "editor.lineHeight": 1.5,
+  "editor.cursorBlinking": "smooth",
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 4,
+
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+
+  "explorer.confirmDelete": false,
+
+  "workbench.iconTheme": "bearded-icons",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.sideBar.location": "right",
+
+  "security.workspace.trust.untrustedFiles": "open",
+  "glassit.alpha": 250,
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Bearded Theme Arc",
+  "window.zoomLevel": 1,
+
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Comment",
+        "scope": ["comment"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Keyword Storage",
+        "scope": ["keyword", "keyword.control", "storage"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Entity",
+        "scope": [
+          "entity.name.method",
+          "entity.name.type.class",
+          "entity.other.attribute-name"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Variable",
+        "scope": ["variable.language"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "comment",
+          "entity.name.type.class",
+          "constant",
+          "storage.modifier",
+          "storage.type.class.js",
+          "keyword"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Comment",
+        "scope": ["comment"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Keyword Storage",
+        "scope": ["keyword", "keyword.control", "storage"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Entity",
+        "scope": [
+          "entity.name.method",
+          "entity.name.type.class",
+          "entity.other.attribute-name"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Variable",
+        "scope": ["variable.language"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "comment",
+          "entity.name.type.class",
+          "constant",
+          "storage.modifier",
+          "storage.type.class.js",
+          "keyword"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "envKeys",
+        "scope": "string.quoted.double.env,source.env,constant.numeric.env",
+        "settings": {
+          "foreground": "#19354900"
+        }
+      }
+    ]
+  }
+}
