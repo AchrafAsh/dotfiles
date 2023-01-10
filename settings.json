@@ -17,7 +17,7 @@
     "explorer.confirmDelete": false,
 
     // Theme
-    "editor.fontFamily": "JetBrains Mono, MonoLisa, Cascadia Code, Menlo",
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono, JetBrains Mono, MonoLisa, Cascadia Code, Menlo",
     "editor.fontSize": 14,
     "editor.fontWeight": 400,
     "editor.fontLigatures": true,
