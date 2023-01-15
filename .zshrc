@@ -2,26 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/achraf/.oh-my-zsh"
-source ~/.bash_profile
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH="$HOME/.oh-my-zsh"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-
-# ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="robbyrussell"
 DEFAULT_USER="achraf"
 POWERLEVEL9K_COLOR_SCHEME="dark"
-
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="🚀 "
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs anaconda)
-POWERLEVEL9K_ANACONDA_BACKGROUND="red"
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -36,17 +25,16 @@ POWERLEVEL9K_ANACONDA_BACKGROUND="red"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -58,6 +46,9 @@ POWERLEVEL9K_ANACONDA_BACKGROUND="red"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -81,8 +72,10 @@ POWERLEVEL9K_ANACONDA_BACKGROUND="red"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv)
-
+plugins=(
+zsh-autosuggestions
+git
+)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -110,34 +103,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# added by Anaconda3 5.3.0 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
-# . "/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
+alias generate="openssl rand -base64 24"
+alias dev="ssh achraf@ssh.achrafash.com"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/achraf/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/achraf/miniconda/etc/profile.d/conda.sh" ]; then
-        . "/home/achraf/miniconda/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/achraf/miniconda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+
+# pnpm
+export PNPM_HOME="/Users/achraf/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
