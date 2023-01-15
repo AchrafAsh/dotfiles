@@ -15,6 +15,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.gpuAcceleration": "off",
     "explorer.confirmDelete": false,
+    "editor.cursorSurroundingLines": 5,
 
     // Theme
     "editor.fontFamily": "JetBrainsMono Nerd Font Mono, JetBrains Mono, MonoLisa, Cascadia Code, Menlo",
@@ -53,7 +54,7 @@
     "git.confirmSync": false,
     "security.workspace.trust.untrustedFiles": "open",
     "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindings": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<C-d>"],
             "after": ["<C-d>", "z", "z"]
@@ -61,6 +62,34 @@
         {
             "before": ["<C-u>"],
             "after": ["<C-u>", "z", "z"]
+        },
+        {
+            "before": ["n"],
+            "after": ["n", "z", "z"]
+        },
+        {
+            "before": ["N"],
+            "after": ["N", "z", "z"]
+        },
+        {
+            "before": ["*"],
+            "after": ["*", "z", "z"]
+        },
+        {
+            "before": ["#"],
+            "after": ["#", "z", "z"]
+        },
+        {
+            "before": ["E"],
+            "after": ["$"]
+        },
+        {
+            "before": ["B"],
+            "after": ["^"]
+        },
+        {
+            "before": ["K"],
+            "after": ["o", "<Esc>"]
         }
     ],
 
@@ -165,5 +194,6 @@
                 }
             }
         ]
-    }
+    },
+    "workbench.colorTheme": "CodeSandbox Legacy"
 }
