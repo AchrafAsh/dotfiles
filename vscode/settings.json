@@ -1,1 +1,513 @@
-/Users/achraf/Library/Application Support/Code/User/settings.json
+{
+    "workbench.settings.editor": "json",
+    "explorer.confirmDragAndDrop": false,
+    "editor.lineNumbers": "relative",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.minimap.enabled": false,
+    "editor.detectIndentation": false,
+    "workbench.tree.indent": 20,
+    "editor.renderWhitespace": "boundary",
+    "editor.insertSpaces": true,
+    "workbench.startupEditor": "welcomePageInEmptyWorkbench",
+    "terminal.integrated.gpuAcceleration": "off",
+    "explorer.confirmDelete": false,
+    "editor.cursorSurroundingLines": 5,
+
+    // Theme
+    "editor.fontFamily": "Dank Mono, Operator Mono, Dank Mono, JetBrainsMono Nerd Font Mono, JetBrains Mono, MonoLisa, Cascadia Code, Menlo, 'Fira Code'",
+    "editor.fontSize": 15,
+    "editor.fontWeight": "100",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 4,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.colorCustomizations": {
+        "tab.activeBorder": "#0cf388"
+    },
+
+    // Formatting
+    "editor.formatOnPaste": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 4,
+    "files.associations": {
+        "*.mdx": "markdown"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+            "source.fixAll": "explicit"
+        },
+        "editor.formatOnType": true
+    },
+    "[markdown]": {
+        "editor.formatOnSave": false,
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "off",
+            "strings": "on"
+        },
+        "editor.snippetSuggestions": "top"
+    },
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "css.lint.unknownAtRules": "ignore",
+
+    // Extensions
+    "git.confirmSync": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.commandCenter": true,
+    "errorLens.excludeBySource": ["eslint(prettier/prettier)"],
+    "workbench.iconTheme": "bearded-icons",
+    "update.showReleaseNotes": false,
+    "debug.disassemblyView.showSourceCode": false,
+    "terminal.integrated.fontSize": 14,
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingBrackets": "never",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.activityBar.location": "top",
+    "workbench.sideBar.location": "right",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.linkedEditing": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "template-string-converter.autoRemoveTemplateString": true,
+    "template-string-converter.addBracketsToProps": true,
+    "todo-tree.regex.regexCaseSensitive": false,
+    "todo-tree.highlights.defaultHighlight": {
+        "type": "tag"
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "checkbox",
+            "background": "#99ffe410",
+            "foreground": "#99ffe4bc"
+        },
+        "FIXME": {
+            "icon": "alert",
+            "background": "#ff808010",
+            "foreground": "#ff8080bc"
+        }
+    },
+    "vim.useSystemClipboard": true,
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["J"],
+            "commands": ["editor.action.moveLinesDownAction"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.moveLinesUpAction"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-d>"],
+            "after": ["<C-d>", "z", "z"]
+        },
+        {
+            "before": ["<C-u>"],
+            "after": ["<C-u>", "z", "z"]
+        },
+        {
+            "before": ["n"],
+            "after": ["n", "z", "z"]
+        },
+        {
+            "before": ["N"],
+            "after": ["N", "z", "z"]
+        },
+        {
+            "before": ["*"],
+            "after": ["*", "z", "z"]
+        },
+        {
+            "before": ["#"],
+            "after": ["#", "z", "z"]
+        },
+        {
+            "before": ["<Enter>"],
+            "after": ["o", "<Esc>"]
+        }, // The Shift+Enter is registered in `keybindings.json`
+        {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        }
+    ],
+
+    // Colors
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "Comment",
+                "scope": ["comment"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Keyword Storage",
+                "scope": ["keyword", "keyword.control", "storage"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Entity",
+                "scope": [
+                    "entity.name.method",
+                    "entity.name.type.class",
+                    "entity.other.attribute-name"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Variable",
+                "scope": ["variable.language"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js",
+                    "keyword"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Comment",
+                "scope": ["comment"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Keyword Storage",
+                "scope": ["keyword", "keyword.control", "storage"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Entity",
+                "scope": [
+                    "entity.name.method",
+                    "entity.name.type.class",
+                    "entity.other.attribute-name"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Variable",
+                "scope": ["variable.language"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js",
+                    "keyword"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Comment",
+                "scope": ["comment"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Keyword Storage",
+                "scope": ["keyword", "keyword.control", "storage"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Entity",
+                "scope": [
+                    "entity.name.method",
+                    "entity.name.type.class",
+                    "entity.other.attribute-name"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Variable",
+                "scope": ["variable.language"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js",
+                    "keyword"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Comment",
+                "scope": ["comment"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Keyword Storage",
+                "scope": ["keyword", "keyword.control", "storage"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Entity",
+                "scope": [
+                    "entity.name.method",
+                    "entity.name.type.class",
+                    "entity.other.attribute-name"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Variable",
+                "scope": ["variable.language"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js",
+                    "keyword"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Comment",
+                "scope": ["comment"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Keyword Storage",
+                "scope": ["keyword", "keyword.control", "storage"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Entity",
+                "scope": [
+                    "entity.name.method",
+                    "entity.name.type.class",
+                    "entity.other.attribute-name"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Variable",
+                "scope": ["variable.language"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js",
+                    "keyword"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Comment",
+                "scope": ["comment"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Keyword Storage",
+                "scope": ["keyword", "keyword.control", "storage"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Entity",
+                "scope": [
+                    "entity.name.method",
+                    "entity.name.type.class",
+                    "entity.other.attribute-name"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Variable",
+                "scope": ["variable.language"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js",
+                    "keyword"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Comment",
+                "scope": ["comment"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Keyword Storage",
+                "scope": ["keyword", "keyword.control", "storage"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Entity",
+                "scope": [
+                    "entity.name.method",
+                    "entity.name.type.class",
+                    "entity.other.attribute-name"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Variable",
+                "scope": ["variable.language"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js",
+                    "keyword"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Comment",
+                "scope": ["comment"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Keyword Storage",
+                "scope": ["keyword", "keyword.control", "storage"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Entity",
+                "scope": [
+                    "entity.name.method",
+                    "entity.name.type.class",
+                    "entity.other.attribute-name"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Variable",
+                "scope": ["variable.language"],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "entity.name.type.class",
+                    "constant",
+                    "storage.modifier",
+                    "storage.type.class.js",
+                    "keyword"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    }
+}
